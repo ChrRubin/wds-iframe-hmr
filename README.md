@@ -6,7 +6,7 @@ Checking the browser console shows that HMR tries to load the `*.hot-update.json
 
 ![image](https://i.imgur.com/wfBxwHp.png)
 
-This bug did not occur in webpack-dev-server v3.11.2.
+This bug did not occur in webpack-dev-server v3.11.2. An example of this can be found in the `wds-3.11.2` branch.
 
 ## Way to reproduce
 

@@ -16,15 +16,11 @@ const config = {
   devServer: {
     host: 'localhost',
     port: 3010,
-    allowedHosts: 'all',
+    disableHostCheck: true,
     hot: true,
     headers: { 'Access-Control-Allow-Origin': '*' },
-    static: {
-      directory: path.join(__dirname, '../dist')
-    },
-    devMiddleware: {
-      writeToDisk: true
-    }
+    contentBase: path.join(__dirname, '../dist'),
+    writeToDisk: true
   },
   plugins: [
     new CleanWebpackPlugin(),
