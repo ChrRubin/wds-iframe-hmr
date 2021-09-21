@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "wds-example",
+  "version": "0.0.1",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "https://www.youtube.com/live_chat?v=5qap5aO4i9A"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/live_chat?v=5qap5aO4i9A"
+      ],
+      "js": [
+        "content-script.js"
+      ],
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "web_accessible_resources": [
+    "*.js",
+    "*.html"
+  ],
+  "browser_action": {},
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
